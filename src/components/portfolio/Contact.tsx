@@ -8,8 +8,8 @@ export const Contact = () => {
     { icon: Mail, label: "Email", value: PROFILE.email, href: `mailto:${PROFILE.email}` },
     { icon: Phone, label: "Phone", value: PROFILE.phone, href: `tel:${PROFILE.phone.replace(/\s/g, "")}` },
     { icon: MapPin, label: "Location", value: PROFILE.location },
-    { icon: Github, label: "GitHub", value: "github.com/shivam", href: PROFILE.github },
-    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/shivam", href: PROFILE.linkedin },
+    { icon: Github, label: "GitHub", value: PROFILE.github.replace("https://", ""), href: PROFILE.github },
+    { icon: Linkedin, label: "LinkedIn", value: PROFILE.linkedin.replace("https://", ""), href: PROFILE.linkedin },
   ];
 
   return (

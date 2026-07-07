@@ -1,6 +1,4 @@
-import resumeAsset from "@/assets/resume.pdf.asset.json";
-
-export const RESUME_URL = resumeAsset.url;
+export const RESUME_URL = "/Shivam_Gupta_Resume.pdf";
 
 export const PROFILE = {
   name: "Shivam Gupta",
@@ -9,8 +7,8 @@ export const PROFILE = {
   location: "Delhi, India",
   email: "shivamgupta.3971@gmail.com",
   phone: "+91 8920808390",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "https://github.com/shivamgupta3971",
+  linkedin: "https://linkedin.com/in/shivamgupta2525",
 };
 
 export const EDUCATION = [
