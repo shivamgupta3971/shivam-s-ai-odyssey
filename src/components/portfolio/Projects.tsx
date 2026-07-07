@@ -60,7 +60,7 @@ export const Projects = () => {
             Projects in the <span className="text-gradient">AI Lab</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Four flagship exhibits — each an interactive experiment in AI, computer vision, or agentic systems.
+            Three flagship exhibits — each an interactive experiment in AI, computer vision, or agentic systems.
           </p>
         </motion.div>
 
