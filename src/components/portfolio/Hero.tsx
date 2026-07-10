@@ -77,7 +77,7 @@ export const Hero = () => {
               { icon: Brain, label: "AI / ML", value: "LLMs · RAG · CV" },
               { icon: Code2, label: "Stack", value: "Python · TS · React" },
               { icon: Zap, label: "Hackathons", value: "10+ National" },
-              { icon: Sparkles, label: "Projects", value: "3 Flagship" },
+              { icon: Sparkles, label: "Projects", value: "4 Flagship" },
             ].map((s) => (
               <div key={s.label} className="glass rounded-xl p-3 flex items-center gap-3">
                 <div className="w-9 h-9 rounded-lg bg-gradient-primary/20 border border-primary/30 grid place-items-center">

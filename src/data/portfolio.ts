@@ -87,6 +87,23 @@ export const PROJECTS = [
     ],
     stack: ["Python", "FastF1", "Arcade", "NumPy"],
   },
+  {
+    id: "carelink",
+    name: "CareLink",
+    subtitle: "AI Post-Surgical Monitoring",
+    color: "hsl(140 80% 55%)",
+    color2: "hsl(190 100% 55%)",
+    icon: "🩺",
+    summary:
+      "LLM-powered patient monitoring platform automating post-discharge follow-up calls, complication detection and clinical decision support.",
+    highlights: [
+      "Automated follow-up calls via Twilio + ElevenLabs",
+      "RAG with Elasticsearch, Jina Embeddings, Perplexity",
+      "Clinician dashboards, records, analytics, AI chatbot",
+      "React + Express + Elastic Cloud full-stack",
+    ],
+    stack: ["React", "Express", "Elasticsearch", "Twilio", "ElevenLabs", "RAG"],
+  },
 ] as const;
 
 export const SKILL_GROUPS = [
