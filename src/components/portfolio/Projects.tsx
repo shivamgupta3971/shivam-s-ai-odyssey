@@ -55,15 +55,6 @@ export const Projects = () => {
                   <span className="w-1.5 h-1.5 rounded-full" style={{ background: p.color, boxShadow: `0 0 8px ${p.color}` }} />
                   Exhibit 0{i + 1}
                 </div>
-                <a
-                  href={p.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full glass border border-primary/20 flex items-center justify-center hover:border-primary/60 hover:scale-110 hover:shadow-neon text-muted-foreground hover:text-primary transition-all duration-300"
-                  aria-label={`View ${p.name} GitHub Repository`}
-                >
-                  <Github className="w-4 h-4" />
-                </a>
               </div>
 
               <div className="p-6 md:p-7">
@@ -82,15 +73,27 @@ export const Projects = () => {
                   ))}
                 </ul>
 
-                <div className="flex flex-wrap gap-1.5">
-                  {p.stack.map((s) => (
-                    <span
-                      key={s}
-                      className="text-[10px] font-mono px-2 py-1 rounded-md bg-muted border border-border text-muted-foreground"
-                    >
-                      {s}
-                    </span>
-                  ))}
+                <div className="flex items-center justify-between gap-4 mt-6 pt-4 border-t border-border/40">
+                  <div className="flex flex-wrap gap-1.5">
+                    {p.stack.map((s) => (
+                      <span
+                        key={s}
+                        className="text-[10px] font-mono px-2 py-1 rounded-md bg-muted border border-border text-muted-foreground"
+                      >
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono rounded-lg glass border border-primary/20 hover:border-primary/60 hover:scale-105 hover:shadow-neon text-muted-foreground hover:text-primary transition-all duration-300 shrink-0"
+                    aria-label={`View ${p.name} GitHub Repository`}
+                  >
+                    <Github className="w-3.5 h-3.5" />
+                    <span>Code</span>
+                  </a>
                 </div>
               </div>
 
