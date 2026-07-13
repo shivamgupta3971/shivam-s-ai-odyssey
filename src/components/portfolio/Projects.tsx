@@ -74,28 +74,41 @@ export const Projects = () => {
               transition={{ duration: 0.6, delay: (i % 2) * 0.1 }}
               className="group relative glass-card neon-border rounded-3xl overflow-hidden hover:shadow-neon transition-all duration-500"
             >
-              {/* 3D exhibit */}
-              <div
-                className="h-56 md:h-64 relative"
-                style={{
-                  background: `radial-gradient(circle at 50% 60%, ${p.color}22, transparent 70%)`,
-                }}
-              >
-                <Suspense fallback={null}>
-                  <Canvas
-                    dpr={[1, 1.5]}
-                    camera={{ position: [0, 0, 4.5], fov: 50 }}
-                    gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
-                  >
-                    <ProjectOrb color={p.color} color2={p.color2} />
-                  </Canvas>
-                </Suspense>
+              {/* Project Showcase Image + 3D Orb Overlay */}
+              <div className="h-56 md:h-64 relative overflow-hidden">
+                {/* Background Showcase Image */}
+                <img
+                  src={p.image}
+                  alt={`${p.name} Showcase`}
+                  className="absolute inset-0 w-full h-full object-cover object-top filter brightness-[0.6] contrast-[1.05] group-hover:scale-105 group-hover:brightness-[0.75] transition-all duration-700 ease-out"
+                />
 
-                <div className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1 rounded-full glass text-[10px] font-mono uppercase tracking-widest">
+                {/* Neon color gradient overlay */}
+                <div
+                  className="absolute inset-0 opacity-30 mix-blend-color-dodge transition-opacity group-hover:opacity-20 duration-500"
+                  style={{
+                    background: `radial-gradient(circle at 50% 60%, ${p.color} 0%, transparent 70%)`,
+                  }}
+                />
+
+                {/* 3D Canvas */}
+                <div className="absolute inset-0 z-10 pointer-events-none">
+                  <Suspense fallback={null}>
+                    <Canvas
+                      dpr={[1, 1.5]}
+                      camera={{ position: [0, 0, 4.5], fov: 50 }}
+                      gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
+                    >
+                      <ProjectOrb color={p.color} color2={p.color2} />
+                    </Canvas>
+                  </Suspense>
+                </div>
+
+                <div className="absolute top-4 left-4 z-20 flex items-center gap-2 px-3 py-1 rounded-full glass text-[10px] font-mono uppercase tracking-widest">
                   <span className="w-1.5 h-1.5 rounded-full" style={{ background: p.color, boxShadow: `0 0 8px ${p.color}` }} />
                   Exhibit 0{i + 1}
                 </div>
-                <div className="absolute top-4 right-4 text-3xl">{p.icon}</div>
+                <div className="absolute top-4 right-4 z-20 text-3xl">{p.icon}</div>
               </div>
 
               <div className="p-6 md:p-7">
