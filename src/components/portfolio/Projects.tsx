@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { PROJECTS } from "@/data/portfolio";
+import { Github } from "lucide-react";
 
 export const Projects = () => {
   return (
@@ -54,6 +55,15 @@ export const Projects = () => {
                   <span className="w-1.5 h-1.5 rounded-full" style={{ background: p.color, boxShadow: `0 0 8px ${p.color}` }} />
                   Exhibit 0{i + 1}
                 </div>
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full glass border border-primary/20 flex items-center justify-center hover:border-primary/60 hover:scale-110 hover:shadow-neon text-muted-foreground hover:text-primary transition-all duration-300"
+                  aria-label={`View ${p.name} GitHub Repository`}
+                >
+                  <Github className="w-4 h-4" />
+                </a>
               </div>
 
               <div className="p-6 md:p-7">

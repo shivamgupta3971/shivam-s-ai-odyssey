@@ -44,6 +44,7 @@ export const PROJECTS = [
     color2: "hsl(160 100% 50%)",
     icon: "🏋️",
     image: "/images/fitveda-showcase.png",
+    github: "https://github.com/shivamgupta3971/fitveda",
     summary:
       "Real-time AI Dance & Fitness Coach analyzing YouTube workout videos with MediaPipe Pose, live pose scoring and voice coaching.",
     highlights: [
@@ -62,6 +63,7 @@ export const PROJECTS = [
     color2: "hsl(300 90% 65%)",
     icon: "👥",
     image: "/images/delayed-ai-clone-showcase.png",
+    github: "https://github.com/shivamgupta3971/Delayed-AI-Clone",
     summary:
       "AI-powered delayed clone system creating a ghost-like temporal shadow of the user with pose, hand and face landmark tracking.",
     highlights: [
@@ -80,6 +82,7 @@ export const PROJECTS = [
     color2: "hsl(30 100% 55%)",
     icon: "🏁",
     image: "/images/f1-replay-showcase.png",
+    github: "https://github.com/shivamgupta3971/F1_analyst_system",
     summary:
       "Interactive Formula 1 race replay app visualizing real-time telemetry, driver positions, tyres, DRS and lap timing on a rendered track.",
     highlights: [
@@ -98,6 +101,7 @@ export const PROJECTS = [
     color2: "hsl(190 100% 55%)",
     icon: "🩺",
     image: "/images/carelink-showcase.png",
+    github: "https://github.com/shivamgupta3971/Care_Link",
     summary:
       "LLM-powered patient monitoring platform automating post-discharge follow-up calls, complication detection and clinical decision support.",
     highlights: [
