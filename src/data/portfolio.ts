@@ -2,7 +2,7 @@ export const RESUME_URL = "/Shivam_Gupta_Resume.pdf";
 
 export const PROFILE = {
   name: "Shivam Gupta",
-  role: "AI Engineer",
+  role: "AI & Machine Learning Engineer",
   tagline: "Building real-time AI systems, computer vision & LLM-powered products.",
   location: "Delhi, India",
   email: "shivamgupta.3971@gmail.com",
@@ -158,7 +158,7 @@ export const CERTIFICATIONS = [
     certificationNumber: "CE5B71-3652U9",
     dateEarned: "23 July 2026",
     dateExpired: "24 July 2027",
-    url: "https://learn.microsoft.com/en-in/users/shivamgupta-2824/credentials/certification/data-analyst-associate?tab=credentials-tab",
+    url: "https://learn.microsoft.com/api/credentials/share/en-in/ShivamGupta-2824/146F873FF8BD8DB6?sharingId=CCFE536A1193AC94",
   },
   {
     title: "Complete Data Science, ML, DL & NLP Bootcamp",
