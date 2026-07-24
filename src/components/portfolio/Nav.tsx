@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { Download, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_URL } from "@/data/portfolio";
+import { Magnetic } from "./Magnetic";
 
 const links = [
   { href: "#hero", label: "Home" },
@@ -18,6 +19,12 @@ const links = [
 export const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 150,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -27,10 +34,15 @@ export const Nav = () => {
   }, []);
 
   return (
-    <motion.nav
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
+    <>
+      <motion.div 
+        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-primary z-[100] origin-left"
+        style={{ scaleX }}
+      />
+      <motion.nav
+        initial={{ y: -80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled ? "py-3" : "py-5"
       }`}
@@ -58,12 +70,14 @@ export const Nav = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <Button asChild variant="hero" size="sm" className="hidden sm:inline-flex">
-              <a href={RESUME_URL} download="Shivam_Gupta_Resume.pdf">
-                <Download className="w-4 h-4" />
-                Resume
-              </a>
-            </Button>
+            <Magnetic>
+              <Button asChild variant="hero" size="sm" className="hidden sm:inline-flex">
+                <a href={RESUME_URL} download="Shivam_Gupta_Resume.pdf">
+                  <Download className="w-4 h-4" />
+                  Resume
+                </a>
+              </Button>
+            </Magnetic>
             <button
               className="lg:hidden p-2 rounded-lg glass"
               onClick={() => setOpen((v) => !v)}
@@ -99,5 +113,6 @@ export const Nav = () => {
         </AnimatePresence>
       </div>
     </motion.nav>
+    </>
   );
 };

@@ -154,6 +154,11 @@ export const CERTIFICATIONS = [
     title: "Microsoft Certified: Power BI Data Analyst Associate",
     code: "PL-300",
     issuer: "Microsoft",
+    credentialId: "146F873FF8BD8DB6",
+    certificationNumber: "CE5B71-3652U9",
+    dateEarned: "23 July 2026",
+    dateExpired: "24 July 2027",
+    url: "https://learn.microsoft.com/en-in/users/shivamgupta-2824/credentials/certification/data-analyst-associate?tab=credentials-tab",
   },
   {
     title: "Complete Data Science, ML, DL & NLP Bootcamp",
