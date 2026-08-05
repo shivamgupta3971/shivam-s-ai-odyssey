@@ -161,6 +161,16 @@ export const CERTIFICATIONS = [
     url: "https://learn.microsoft.com/api/credentials/share/en-in/ShivamGupta-2824/146F873FF8BD8DB6?sharingId=CCFE536A1193AC94",
   },
   {
+    title: "Microsoft Certified: Fabric Data Engineer Associate",
+    code: "DP-700",
+    issuer: "Microsoft",
+    credentialId: "3F188A6100CB605A",
+    certificationNumber: "E4Z020-5C9261",
+    dateEarned: "5 August 2026",
+    dateExpired: "6 August 2027",
+    url: "https://learn.microsoft.com/en-in/users/shivamgupta-2824/credentials/certification/fabric-data-engineer-associate?tab=credentials-tab",
+  },
+  {
     title: "Complete Data Science, ML, DL & NLP Bootcamp",
     code: "Certification",
     issuer: "Advanced ML Program",
