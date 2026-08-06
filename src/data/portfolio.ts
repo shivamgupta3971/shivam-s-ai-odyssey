@@ -168,7 +168,7 @@ export const CERTIFICATIONS = [
     certificationNumber: "E4Z020-5C9261",
     dateEarned: "5 August 2026",
     dateExpired: "6 August 2027",
-    url: "https://learn.microsoft.com/en-in/users/shivamgupta-2824/credentials/certification/fabric-data-engineer-associate?tab=credentials-tab",
+    url: "https://learn.microsoft.com/api/credentials/share/en-in/ShivamGupta-2824/3F188A6100CB605A",
   },
   {
     title: "Complete Data Science, ML, DL & NLP Bootcamp",
