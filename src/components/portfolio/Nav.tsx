@@ -47,7 +47,7 @@ export const Nav = () => {
         scrolled ? "py-3" : "py-5"
       }`}
     >
-      <div className={`container mx-auto ${scrolled ? "glass rounded-2xl" : ""} transition-all`}>
+      <div className={`container mx-auto ${scrolled || open ? "glass rounded-2xl border-border/80 shadow-2xl" : ""} transition-all duration-300`}>
         <div className="flex items-center justify-between px-4 py-2">
           <a href="#hero" className="flex items-center gap-2 font-display font-bold text-lg">
             <span className="w-8 h-8 rounded-lg bg-gradient-primary grid place-items-center text-background font-bold shadow-neon">
@@ -79,7 +79,7 @@ export const Nav = () => {
               </Button>
             </Magnetic>
             <button
-              className="lg:hidden p-2 rounded-lg glass"
+              className="lg:hidden p-2 rounded-lg glass hover:text-primary transition-colors"
               onClick={() => setOpen((v) => !v)}
               aria-label="Toggle menu"
             >
@@ -96,13 +96,13 @@ export const Nav = () => {
               exit={{ height: 0, opacity: 0 }}
               className="lg:hidden overflow-hidden"
             >
-              <div className="flex flex-col p-4 gap-1">
+              <div className="flex flex-col p-4 gap-1 border-t border-border/10 mt-2">
                 {links.map((l) => (
                   <a
                     key={l.href}
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="px-3 py-2.5 text-sm rounded-lg hover:bg-primary/10 hover:text-primary transition-colors"
+                    className="px-3 py-2.5 text-sm rounded-lg hover:bg-primary/10 hover:text-primary transition-colors font-medium text-muted-foreground"
                   >
                     {l.label}
                   </a>
