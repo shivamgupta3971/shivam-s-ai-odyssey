@@ -151,14 +151,14 @@ export const ACHIEVEMENTS = [
 
 export const CERTIFICATIONS = [
   {
-    title: "Microsoft Certified: Power BI Data Analyst Associate",
-    code: "PL-300",
+    title: "Microsoft Certified: Fabric Analytics Engineer Associate",
+    code: "DP-600",
     issuer: "Microsoft",
-    credentialId: "146F873FF8BD8DB6",
-    certificationNumber: "CE5B71-3652U9",
-    dateEarned: "23 July 2026",
-    dateExpired: "24 July 2027",
-    url: "https://learn.microsoft.com/api/credentials/share/en-in/ShivamGupta-2824/146F873FF8BD8DB6?sharingId=CCFE536A1193AC94",
+    credentialId: "7147529AB0E8AB90",
+    certificationNumber: "361Q40-F0D111",
+    dateEarned: "14 August 2026",
+    dateExpired: "15 August 2027",
+    url: "https://learn.microsoft.com/api/credentials/share/en-in/ShivamGupta-2824/7147529AB0E8AB90",
   },
   {
     title: "Microsoft Certified: Fabric Data Engineer Associate",
@@ -169,6 +169,16 @@ export const CERTIFICATIONS = [
     dateEarned: "5 August 2026",
     dateExpired: "6 August 2027",
     url: "https://learn.microsoft.com/api/credentials/share/en-in/ShivamGupta-2824/3F188A6100CB605A",
+  },
+  {
+    title: "Microsoft Certified: Power BI Data Analyst Associate",
+    code: "PL-300",
+    issuer: "Microsoft",
+    credentialId: "146F873FF8BD8DB6",
+    certificationNumber: "CE5B71-3652U9",
+    dateEarned: "23 July 2026",
+    dateExpired: "24 July 2027",
+    url: "https://learn.microsoft.com/api/credentials/share/en-in/ShivamGupta-2824/146F873FF8BD8DB6?sharingId=CCFE536A1193AC94",
   },
   {
     title: "Complete Data Science, ML, DL & NLP Bootcamp",

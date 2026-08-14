@@ -22,6 +22,32 @@ vi.mock("@react-three/drei", () => ({
   TorusKnot: () => null,
 }));
 
+// Mock GSAP to prevent asynchronous tickers and timeouts causing uncaught exceptions in JSDOM
+vi.mock("gsap", () => {
+  const gsapMock = {
+    registerPlugin: vi.fn(),
+    from: vi.fn(),
+    to: vi.fn(),
+    context: vi.fn(() => ({ revert: vi.fn() })),
+    utils: {
+      toArray: vi.fn(() => []),
+    },
+    ticker: {
+      add: vi.fn(),
+      remove: vi.fn(),
+      lagSmoothing: vi.fn(),
+    },
+  };
+  return {
+    gsap: gsapMock,
+    default: gsapMock,
+  };
+});
+
+vi.mock("gsap/ScrollTrigger", () => ({
+  ScrollTrigger: vi.fn(),
+}));
+
 // Mock IntersectionObserver for JSDOM
 const mockIntersectionObserver = vi.fn();
 mockIntersectionObserver.mockReturnValue({
@@ -39,6 +65,12 @@ mockResizeObserver.mockReturnValue({
   disconnect: vi.fn(),
 });
 window.ResizeObserver = mockResizeObserver;
+
+// Mock requestAnimationFrame and cancelAnimationFrame for GSAP in JSDOM
+global.requestAnimationFrame = (callback) => setTimeout(callback, 0) as any;
+global.cancelAnimationFrame = (id) => clearTimeout(id as any);
+window.requestAnimationFrame = global.requestAnimationFrame;
+window.cancelAnimationFrame = global.cancelAnimationFrame;
 
 describe("Index Page Rendering Test", () => {
   it("renders without crashing", () => {
