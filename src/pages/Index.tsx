@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
@@ -12,11 +12,15 @@ import { Projects } from "@/components/portfolio/Projects";
 import { Achievements } from "@/components/portfolio/Achievements";
 import { Resume } from "@/components/portfolio/Resume";
 import { Contact } from "@/components/portfolio/Contact";
+import { SplashScreen } from "@/components/portfolio/SplashScreen";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Index = () => {
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
+    if (loading) return;
+
     // Initialize Lenis smooth scroll for inertial momentum scrolling
     const lenis = new Lenis({
       duration: 1.2,
@@ -53,21 +57,24 @@ const Index = () => {
       gsap.ticker.remove(tick);
       lenis.destroy();
     };
-  }, []);
+  }, [loading]);
 
   return (
-    <main className="relative overflow-x-hidden">
-      <CustomCursor />
-      <Nav />
-      <Hero />
-      <About />
-      <Skills />
-      <Education />
-      <Projects />
-      <Achievements />
-      <Resume />
-      <Contact />
-    </main>
+    <>
+      <SplashScreen onFinish={() => setLoading(false)} />
+      <main className="relative overflow-x-hidden">
+        <CustomCursor />
+        <Nav />
+        <Hero />
+        <About />
+        <Skills />
+        <Education />
+        <Projects />
+        <Achievements />
+        <Resume />
+        <Contact />
+      </main>
+    </>
   );
 };
 
