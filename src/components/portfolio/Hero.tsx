@@ -58,15 +58,6 @@ export const Hero = () => {
             <TextScramble text="AI Engineer" delay={0.1} duration={0.5} /> · {PROFILE.location}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl font-medium text-secondary mb-3 flex items-center gap-2 select-all cursor-default"
-          >
-            Hi! I'm Shivam Gupta <span className="animate-wave origin-[70%_70%] inline-block">👋</span>
-          </motion.div>
-
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-display leading-[1.05] mb-6">
             <span className="block select-all cursor-default">
               <TextScramble text="Shivam" delay={0.25} duration={0.7} />
