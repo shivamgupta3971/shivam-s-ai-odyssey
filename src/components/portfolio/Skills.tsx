@@ -1,10 +1,7 @@
-import { Suspense, lazy } from "react";
+import { Suspense } from "react";
 import { motion } from "framer-motion";
+import { SkillsGalaxy } from "./SkillsGalaxy";
 import { SKILL_GROUPS } from "@/data/portfolio";
-
-const SkillsGalaxy = lazy(() =>
-  import("./SkillsGalaxy").then((m) => ({ default: m.SkillsGalaxy }))
-);
 
 export const Skills = () => {
   return (
